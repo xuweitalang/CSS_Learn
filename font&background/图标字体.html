@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        li::before {
+            /* 
+        方法1：
+        通过伪元素来设置图标字体
+            1.找到要设置图标的元素通过before或after选中
+            2.在content中设置字体的编码
+            3.设置字体的样式 font-family: 'Font Awesome 5 Brands' 
+        */
+            content: '\f1b0';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    图标字体：
+    在使用图标时，可以将图标直接设置为字体，然后通过font-face的形式来对字体进行引入，这样就可以通过使用字体
+    的形式来使用图标；
+
+    使用步骤fontawesome
+    1.下载https://fontawesome . com/
+    2.解压
+    3.将css和webfonts移动到项目中4.将all.css引入到网页中
+    5.使用图标字体
+    方法2：
+    - 直接通过类名来使用图标字体，前面fas/fab是固定的，后面为图标类名；
+    class="fas fa-bell"
+    class="fab fa-accessible-icon" 
+-->
+
+
+
+    <i class="fas fa-bell"></i>
+    <i class="fab fa-accessible-icon"></i>
+
+
+    <ul>
+        <li>锄禾日当午</li>
+        <li>汗滴禾下土</li>
+        <li>谁知盘中餐</li>
+        <li>粒粒皆辛苦</li>
+    </ul>
+
+    <!-- 
+    方法3：
+    通过实体来使用图标字体:&#x图标的编码;
+    -->
+    <span class="fas">&#xfef3;</span>
+</body>
+
+</html>
