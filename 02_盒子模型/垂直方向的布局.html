@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        默认情况下，父元素的高度是被内容撑开自适应的；
+        如果父容器设置了height，则height就是为具体设置的值；
+
+        子元素是在父元素的内容区域排列的，
+        如果子元素的大小超过了父元素，则子元素会从父元素溢出，
+        通常使用overflow属性来设置父元素如何处理溢出的子元素。
+        overflow的可选值：
+            visible: 子元素会从父元素溢出（默认值）
+            hidden: 溢出内容将被裁剪不会显示；
+            scroll：生成两个滚动条，通过滚动条来查看完整的内容；
+            auto: 根据需要生成滚动条；
+
+        overflow还有overflow-x和overflow-y这两个属性；表示单独处理x和y方向的溢出情况。
+
+        扩展：要想让一个文字在父元素中垂直居中，只需要将父元素的line-height和父元素的height设置成相同的值即可。
+         */
+        
+         .outer {
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+            background-color: yellow;
+         }
+         .inner {
+            width: 200px;
+            height: 300px;
+            background-color: red;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+        /* 1.交集选择器
+        作用：选中同时符合多个条件的元素；
+        语法：选择器1选择器2选择器n {}
+        注意：交集选择器中如果有元素选择器，必须以元素选择器开头
+         */
+
+         /* 这里表示：div标签下class为test的标签 */
+        div.test {
+            color: red;
+        }
+
+
+
+        /* 2.选择器分组（并集选择器）
+            作用：同时选择了多个选择器对应的元素；
+            语法：选择器1,选择器2,选择器n {} 
+            例如：
+            h1,.test,#div.test {}
+        */
+        h1,span {
+            color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="test">我是div</div>
+    <p class="test">我是p元素</p>
+
+    <h1>我是h1</h1>
+    <span>我是span</span>
+</body>
+</html>

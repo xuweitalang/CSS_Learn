@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            /* 
+            box-shadow 设置元素的阴影效果，且不会影响元素的大小；
+            参数说明：
+            参数1：水平偏移量：设置阴影的水平位置，正值向右移动，负值向左移动；
+            参数2: 垂直偏移量：设置阴影的垂直位置，正值向下移动，负值向上移动；
+            参数3: 阴影模糊效果半径；
+            参数4: 阴影颜色；  
+             */
+            box-shadow: 10px 10px 20px gainsboro;
+        }
+
+        .box1:hover {
+            /* 
+            outline用来设置轮廓，用法与border一样；
+            不同于border的是，outline不会影响元素的大小；
+             */
+            outline: 10px red solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

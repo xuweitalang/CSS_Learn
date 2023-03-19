@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        /* 
+        解决子元素设置外边距后，父元素跟随子元素一起设置了外边距的问题。
+        通过一下方式可以让父元素不跟随子元素设置的外边距。
+         */
+        /* .box1::before {
+            content: '';
+            display: table;
+        } */
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 100px;
+        }
+
+        /* 
+        推荐方式：
+        clearfix这个样式可以同时解决父元素高度塌陷和外边距重叠的问题；
+        当遇到这些问题时，直接在元素上加上clearfix类即可；
+         */
+        .clearfix::before,
+        .clearfix::after {
+            content:'';
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

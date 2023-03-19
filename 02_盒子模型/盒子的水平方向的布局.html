@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 200px;
+            border: 10px red solid;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        /* 
+        元素的水平方向的布局：
+        元素在其父元素中水平方向的位置由以下几个属性共同决定：
+        margin-left
+        border-left
+        padding-left 
+        width
+        padding-right
+        border-right
+        margin-right
+        七个元素公共决定。
+        一个元素在其父元素中，水平布局必须满足以下等式：
+        margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 其父容器内容区的宽度
+        比如以上案例：
+        margin-left(0) + 
+        border-left(0) + 
+        padding-left(0) + 
+        width(200) + 
+        padding-right(0) + 
+        border-right(0) + 
+        margin-right(0)
+        = 父容器width(800) 
+        不符合以上等式： 则称为过渡约束，等式会进行自动调整。
+            调整的情况：
+                (1)如果这七个值中没有auto的情况，则浏览器会自动调整margin-right值以使等式满足（即以上案例中margin-right为600）。
+                    margin-left(0) + 
+                    border-left(0) + 
+                    padding-left(0) + 
+                    width(200) + 
+                    padding-right(0) + 
+                    border-right(0) + 
+                    margin-right(600)
+                    = 父容器width(800) 
+                (2)如果这七个值里面有auto的情况。则会自动调整为auto的那个值来是等式成立。
+                以上七个值可以设置auto的属性有，margin-left,width,margin-right;
+                    如果width设置为auto，则width会调整为800：
+                        margin-left(0) + 
+                        border-left(0) + 
+                        padding-left(0) + 
+                        width(800) + 
+                        padding-right(0) + 
+                        border-right(0) + 
+                        margin-right(0)
+                        = 父容器width(800) 
+                (3)如果子元素的width和一个外边距都设置为auto的时候，则width会调整为最大，设置成auto的外边距为0；
+                (4)如果三个值都是auto，则width调整为最大值，外边距都为0；
+                (5)如果width为具体的值，而外边距都是auto，则会将外边距设置成相同的值；
+         */     
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    
+</body>
+</html>
