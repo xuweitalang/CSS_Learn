@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            background-image: url(./img/txtImg.png);
+            /* background-repeat: 用来设置背景的重复方式 */
+            background-repeat: no-repeat;
+            /* background-position: 用来设置图片的位置; 
+            设置方式1：通过top、left、right、bottom、center几个表示方位的词来设置位置；
+                      使用方位的词必须要指定两个值分别表示水平和垂直方向位置，如果只写一个值，则第二个值默认为center；
+            设置方式2: 通过偏移量来设置
+            */
+            background-position: bottom right;
+            
+            /* 通过偏移量设置位置：水平偏移量 垂直偏移量 */
+            /* background-position: 10px 20px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
